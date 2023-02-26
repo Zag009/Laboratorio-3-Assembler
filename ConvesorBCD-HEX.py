@@ -30,6 +30,7 @@ while True:
         chk = 1
         Hnum = []
         i = 0
+        respuesta = ""
         while num!=0:
             rem = int(num)%10
             hex = hex + (rem*mul)
@@ -45,7 +46,7 @@ while True:
                 mul = 1
                 hex = 0
                 chk = 1
-                i = 1+0
+                i = i+1
             else:
                 mul = mul*2
                 chk = chk+1
@@ -59,7 +60,11 @@ while True:
         if values [0] [-1] not in ("01"):
             sg.popup("El valor ingresado no es binario")
         i = i + 1
-        window["Resultado"].update(Hnum)
+        
+        for i in range(len(Hnum)):
+            respuesta += str(Hnum[(len(Hnum)) - i - 1])
+            
+        window["Resultado"].update(respuesta)
 
     elif event == "Hexadecimal - Binario":
         Num = values[0]
