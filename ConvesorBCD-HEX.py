@@ -1,6 +1,6 @@
 import PySimpleGUI as sg
 
-sg.theme('DarkAmber')
+g.theme('DarkAmber')
 
 ###############################################
 #Genera texto y botones para elejir opciones.
